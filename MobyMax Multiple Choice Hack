@@ -1,0 +1,17 @@
+javascript: "use strict";
+void
+function(a) {
+  var b = function() {
+    alert("Choose the first answer after pressing the 'ok' button. \n\nWeither you know its right or wrong, I changed the answer from whatever it was to number 1.\n F.Y.I, this only works on multiple choise ");
+    javascript: ans = CurrentProblem.CorrectAnswer;
+    (function(b) {
+      document.getElementsByClassName("ms-pbl-manchoice ms-pbl-manchoice-checkbox ms-pbl-manchoice-radio-multistate")[b].setAttribute("data-name", ans)
+    })(0)
+  };
+  if (a && a.fn && 1.7 <= parseFloat(a.fn.jquery)) return void load(a);
+  var c = document.createElement("script");
+  c.src = "https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js", c.onload = c.onreadystatechange = function() {
+    var a = this.readyState;
+    a && "loaded" !== a && "complete" !== a || b(jQuery.noConflict())
+  }, document.getElementsByTagName("head")[0].appendChild(c)
+}(window.jQuery);
