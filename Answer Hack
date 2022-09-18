@@ -1,0 +1,13 @@
+javascript: "use strict";
+void
+function(a) {
+  var b = function() {
+    ans = CurrentProblem.CorrectAnswer, alert("the answer is " + ans + "\n\nif there is this symbol at the end '|', ignore it and dont type it")
+  };
+  if (a && a.fn && 1.7 <= parseFloat(a.fn.jquery)) return void load(a);
+  var c = document.createElement("script");
+  c.src = "https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js", c.onload = c.onreadystatechange = function() {
+    var a = this.readyState;
+    a && "loaded" !== a && "complete" !== a || b(jQuery.noConflict())
+  }, document.getElementsByTagName("head")[0].appendChild(c)
+}(window.jQuery);
